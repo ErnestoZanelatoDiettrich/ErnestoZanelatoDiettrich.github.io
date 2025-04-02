@@ -1,0 +1,121 @@
+h5 {
+  border: 4px solid white;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 40px;
+}
+
+h4 {
+  font-family: Monaco, monospace;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 0px;
+}
+
+p {
+  text-align: center;
+  font-family: Copperplate, monotone;
+  font-size: 30px;
+  color: white;
+  border: 5px solid white;
+  padding: 10px; /* Adicionando padding para manter o tamanho igual */
+}
+
+h1 {
+  font-family: Monaco, monospace;
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+html {
+  background-image: url('https://tr.rbxcdn.com/180DAY-cee6edfb36f7c1d81e9ab0729d084de5/512/512/Image/Webp/noFilter');
+  background-size: contain;
+}
+
+h2 {
+  font-family: Monaco, monospace;
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 40px;
+	
+}
+
+h6 {
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding: 10px;
+}
+
+div {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px;
+}
+
+.item {
+  text-align: center;
+  font-family: Copperplate, monospace;
+  font-size: 20px;
+  color: white;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 20px; 
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; 
+}
+
+img {
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+
+h4, h3, p {
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 80%; 
+}
+
