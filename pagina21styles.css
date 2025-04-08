@@ -25,7 +25,7 @@ h4 {
   margin: 0px;
 }
 
-ul {
+p {
   text-align: center;
   font-family: Copperplate, monotone;
   font-size: 30px;
@@ -111,7 +111,7 @@ img {
 }
 
 
-h4, h3, ul {
+h4, h3, p {
   border: 5px solid white;
   border-radius: 10px;
   padding: 10px;
