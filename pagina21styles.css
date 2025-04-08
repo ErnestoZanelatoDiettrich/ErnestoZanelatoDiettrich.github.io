@@ -31,7 +31,7 @@ ul {
   font-size: 30px;
   color: white;
   border: 5px solid white;
-  padding: 10px; /* Adicionando padding para manter o tamanho igual */
+  padding: 10px; 
 }
 
 h1 {
@@ -111,7 +111,7 @@ img {
 }
 
 
-h4, h3, p {
+h4, h3, ul {
   border: 5px solid white;
   border-radius: 10px;
   padding: 10px;
