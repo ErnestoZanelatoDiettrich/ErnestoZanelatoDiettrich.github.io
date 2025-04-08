@@ -90,6 +90,7 @@ div {
 }
 
 .item {
+  text-align: center;	
   font-family: Copperplate, monospace;
   font-size: 20px;
   color: white;
