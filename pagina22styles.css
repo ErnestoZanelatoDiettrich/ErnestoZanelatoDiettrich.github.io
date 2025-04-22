@@ -78,10 +78,6 @@ h6 {
   padding: 10px;
 }
 
-div {
-  display: flex;
-}
-
 .container {
   justify-content: space-around;
   align-items: center;
