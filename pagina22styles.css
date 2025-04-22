@@ -112,7 +112,19 @@ img {
     border-collapse: collapse;
     border-spacing: 10px; 
     width: 80%; 
-    table-layout: fixed; 
+    table-layout: fixed;
+	text-align: center;
+	  font-family: Copperplate, monospace;
+	  font-size: 20px;
+	  color: white;
+	  border: 5px solid white;
+	  border-radius: 10px;
+	  padding: 20px; 
+	  display: block;
+	  flex-direction: column;
+	  justify-content: center;
+	  
+  	  
             
   }
 
