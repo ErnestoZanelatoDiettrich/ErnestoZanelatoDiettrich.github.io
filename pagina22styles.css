@@ -109,7 +109,7 @@ img {
 }
 
   table {
-    border-collapse: separate;
+    border-collapse: colapse;
     border-spacing: 10px; 
     width: 80%; 
     table-layout: fixed; 
