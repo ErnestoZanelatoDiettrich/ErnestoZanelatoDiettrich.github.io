@@ -121,4 +121,14 @@ h4, h3, p {
   margin: 0 auto;
   width: 80%; 
 }
+<style>
+  table {
+    border-collapse: separate;
+    border-spacing: 20px; 
+  }
+
+  td {
+    padding: 15px; 
+  }
+</style>
 
