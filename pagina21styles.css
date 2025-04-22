@@ -78,14 +78,10 @@ h6 {
   padding: 10px;
 }
 
-div {
-  display: flex;
-}
 
 .container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   margin: 40px;
 }
 
@@ -101,7 +97,8 @@ div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box; 
+  width: 500px;
+		
 }
 
 img {
