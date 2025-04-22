@@ -25,13 +25,13 @@ h4 {
   margin: 0px;
 }
 
-p {
+tr {
   text-align: center;
   font-family: Copperplate, monotone;
   font-size: 30px;
   color: white;
   border: 5px solid white;
-  padding: 10px; /* Adicionando padding para manter o tamanho igual */
+  padding: 10px; 
 }
 
 h1 {
