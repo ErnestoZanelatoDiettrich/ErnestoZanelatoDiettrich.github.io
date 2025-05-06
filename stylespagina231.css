@@ -93,8 +93,8 @@ img {
 }
 
 
-tr {
+table {
+  border-collapse: collapse; 
   border: 5px solid white;
-  margin: 0 auto;
-  width: 80%; 
+   
 }
