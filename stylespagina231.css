@@ -91,10 +91,16 @@ img {
   width: 150px;
   height: 150px;
 }
-
-
-table {
-  border-collapse: collapse; 
-  border: 5px solid white;
-   
-}
+ table {
+        width: 50%;
+        border-collapse: collapse;
+	text-align: center;    
+ }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: black;
+        }
