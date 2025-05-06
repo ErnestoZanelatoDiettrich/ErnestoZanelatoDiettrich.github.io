@@ -92,7 +92,9 @@ img {
   height: 150px;
 }
  table {
-        width: 50%;
+        font-family: Monaco, monospace;
+	color: white;
+	width: 50%;
         border-collapse: collapse;
 	text-align: center;    
  }
