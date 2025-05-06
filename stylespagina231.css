@@ -96,10 +96,11 @@ img {
 	color: white;
 	width: 50%;
         border-collapse: collapse;
-	text-align: center;    
+	text-align: center;  
+	 margin: 0 auto;
  }
         th, td {
-            border: 1px solid white;
+            border: 5px solid white;
             padding: 8px;
             text-align: center;
         }
