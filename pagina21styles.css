@@ -121,15 +121,17 @@ h4, h3, p {
   top: 400px;       
   left: 400px;      
   background-color: black;  
-  padding: 5px 10px; 
   font-family: Copperplate, monospace;
   color: white;    
   border: 2px solid white;
   border-radius: 5px; 
-  font-size: 5px;    
+  font-size: 17px;    
   z-index: 1000;
   width: 30px;
-  height: 40px;	
+  height: 40px;
+  width: 200px;
+  height: 120px;
+  text-align: center;	
   	
 }
 
