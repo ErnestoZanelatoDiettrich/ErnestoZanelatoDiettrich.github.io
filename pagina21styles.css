@@ -115,3 +115,37 @@ h4, h3, p {
   margin: 0 auto;
   width: 80%; 
 }
+
+#contador-container {
+  position: fixed;  
+  top: 20px;       
+  left: 20px;      
+  background-color: white;  
+  color: black;    
+  padding: 10px 20px; 
+  font-family: Copperplate, monospace;	
+  border-radius: 5px; 
+  font-size: 20px;    
+  z-index: 1000;     
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: Copperplate, monospace;
+  background-color: gray;  	
+}
+ clearbotton {
+  position: fixed;  
+  top: 15px;       
+  left: 15px;      
+  background-color: gray;  
+  color: black;    
+  padding: 10px 20px; 
+  font-family: Copperplate, monospace;	
+  border-radius: 5px; 
+  font-size: 20px;    
+  z-index: 1000;  
+	 
+ }
