@@ -122,7 +122,7 @@ h4, h3, p {
   left: 200px auto;      
   background-color: gray;  
   font-family: Copperplate, monospace;
-  color: black;    
+  color: white;    
   border: 2px solid White;
   border-radius: 5px; 
   font-size: 30px;    
@@ -138,17 +138,21 @@ button {
   padding: 10px;
   font-size: 16px;
   font-family: Copperplate, monospace;
-  background-color: gray;  	
+  color: white;
+  background-color: gray; 
+  border: 2px solid white;	
+  border-radius: 8px;
+	
 }
  #clearbotton-container {
   position: fixed;  
   top: 80px;       
   right: 200px auto;      
   background-color: gray;  
-  color: black;    
+  color: white;    
   padding: 10px 20px; 
   font-family: Copperplate, monospace;
-  border: 2px white;	 
+  border: 2px solid white;	 
   border-radius: 5px; 
   font-size: 20px;    
   z-index: 1000;  
