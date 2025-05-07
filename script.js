@@ -6,3 +6,7 @@ function adicionarValor(valor) {
   contador += valor;  
   document.getElementById('contador').innerText = contador; 
 }
+function limparContador() {
+  contador = 0;  
+  document.getElementById('contador').innerText = contador; 
+}
