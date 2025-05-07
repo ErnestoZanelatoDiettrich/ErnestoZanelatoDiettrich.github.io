@@ -118,14 +118,14 @@ h4, h3, p {
 
 #contador-container {
   position: fixed;  
-  top: 400px;       
-  left: 400px;      
+  top: 30px;       
+  right: 200px auto;      
   background-color: black;  
   font-family: Copperplate, monospace;
   color: white;    
   border: 2px solid white;
   border-radius: 5px; 
-  font-size: 17px;    
+  font-size: 30px;    
   z-index: 1000;
   width: 30px;
   height: 40px;
