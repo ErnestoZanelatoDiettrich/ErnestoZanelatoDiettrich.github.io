@@ -137,7 +137,7 @@ button {
   font-family: Copperplate, monospace;
   background-color: gray;  	
 }
- clearbotton {
+ #clearbotton-container {
   position: fixed;  
   top: 0px;       
   right: 200px auto;      
