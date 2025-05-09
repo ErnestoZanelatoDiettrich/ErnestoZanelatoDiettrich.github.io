@@ -108,9 +108,23 @@ th {
 	
 	
 }
-first {
-	blackground-color: gold;
+#first-container {
+	background-color: gold;
 
 
 }
+#second-container {
+	background-color: silver;
+
+
+}
+#third-container {
+	background-color: bronze;
+
+
+}
+#others-container {
+	background: light blue;
+}
+
 	
