@@ -91,19 +91,26 @@ img {
   width: 150px;
   height: 150px;
 }
- table {
-        font-family: Monaco, monospace;
+table {
+	font-family: Monaco, monospace;
 	color: white;
 	width: 50%;
         border-collapse: collapse;
 	text-align: center;  
 	 margin: 0 auto;
  }
-        th, td {
-            border: 5px solid white;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: black;
-        }
+th, td {
+	border: 5px solid white;
+        padding: 8px;
+        text-align: center;
+}
+th {
+	background-color: black;
+	
+}
+first {
+	blackground-color: gold;
+
+
+}
+	
