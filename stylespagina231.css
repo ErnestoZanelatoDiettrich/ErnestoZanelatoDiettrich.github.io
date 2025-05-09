@@ -108,22 +108,21 @@ th {
 	
 	
 }
-#first-container {
+first {
 	background-color: gold;
 
 
 }
-#second-container {
+second {
 	background-color: silver;
 
 
-}
-#third-container {
+}third {
 	background-color: rosybrown;
 
 
 }
-#others-container {
+others {
 	background: light blue;
 }
 
