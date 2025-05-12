@@ -2,7 +2,7 @@
 let contador = 0;
 
 function atualizarValor() {
-      document.getElementById('contador').textContent = valor;
+      document.getElementById('contador').textContent = contador;
     }
 function adicionarValor(valor) {
   contador += valor;  
