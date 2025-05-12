@@ -21,8 +21,7 @@ h3 {
 	text-align: center;
 	align-items: center;
 	border: 5px solid white;
-	margin-left: 500px;
-	margin-right: 500px;
+	margin: 0 auto;
 	padding: 10px;
 	border-radius: 10px;
 
