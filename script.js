@@ -1,7 +1,9 @@
 
 let contador = 0;
 
-
+function atualizarValor() {
+      document.getElementById('contador').textContent = valor;
+    }
 function adicionarValor(valor) {
   contador += valor;  
   document.getElementById('contador').innerText = contador; 
@@ -12,5 +14,5 @@ function limparContador() {
 }
 function removerValor(valor) { 
   contador = Math.max(0, contador - valor);
-  document.getElementById('contador').innerText = contador; 
+  atualizarValor();
 }
