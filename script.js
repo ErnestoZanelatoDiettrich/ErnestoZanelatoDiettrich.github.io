@@ -10,8 +10,7 @@ function limparContador() {
   contador = 0;  
   document.getElementById('contador').innerText = contador; 
 }
-function removerValor(valor) {
-  contador -= valor;  
-  contador = Math.max(0);
+function removerValor(valor) { 
+  contador = Math.max(0, contador - valor);
   document.getElementById('contador').innerText = contador; 
 }
