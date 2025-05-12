@@ -74,10 +74,11 @@ h6 {
   text-align: center;
   border: 3px solid white;
   border-radius: 10px;
-  margin-left: 500px;
-  margin-right: 500px;
+  margin: 20 auto;
+  width: 250px;
   padding: 10px;
 }
+
 
 
 .container {
