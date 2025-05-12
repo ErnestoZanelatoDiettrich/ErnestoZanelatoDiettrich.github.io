@@ -5,6 +5,10 @@ h1 {
 	font-weight: bold;
 	text-align: center;
 }
+img {
+	
+
+}
 
 html {
 	background-image: url('https://tr.rbxcdn.com/180DAY-cee6edfb36f7c1d81e9ab0729d084de5/512/512/Image/Webp/noFilter');
@@ -21,9 +25,10 @@ h3 {
 	text-align: center;
 	align-items: center;
 	border: 5px solid white;
-	margin: 0 auto;
+	margin: 20 auto;
 	padding: 10px;
 	border-radius: 10px;
+	width: 250px;
 
 }
 
@@ -35,6 +40,7 @@ h2 {
 	font-weight: bold;
 	text-align: center;
 }
+
 a {
 	font-family: Arial, sans-serif;
 	font-size: 50px;
@@ -42,4 +48,3 @@ a {
 	font-weight: bold;
 
 }
-
