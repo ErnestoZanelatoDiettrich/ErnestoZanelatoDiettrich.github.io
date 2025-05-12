@@ -12,6 +12,6 @@ function limparContador() {
 }
 function removerValor(valor) {
   contador -= valor;  
-  contador = Math.max(0, contador + valor);
+  contador = Math.max(0);
   document.getElementById('contador').innerText = contador; 
 }
