@@ -37,3 +37,10 @@ html {
 	background-image: url('https://tr.rbxcdn.com/180DAY-cee6edfb36f7c1d81e9ab0729d084de5/512/512/Image/Webp/noFilter');
 	background-size: contain;
 }
+a {
+	font-family: Arial, sans-serif;
+	font-size: 50px;
+	color: white;
+	font-weight: bold;
+}
+
