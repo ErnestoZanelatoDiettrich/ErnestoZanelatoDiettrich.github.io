@@ -100,7 +100,7 @@ h6 {
   justify-content: center;
   align-items: center;
   width: 500px;
-  background: linear-gradient(0deg, black, pink);
+  background: linear-gradient(0deg, black, #910c8b);
 
 		
 }
@@ -118,7 +118,7 @@ h4, h3, p {
   padding: 10px;
   margin: 0 auto;
   width: 80%;
-  background: linear-gradient(6deg, black, pink);
+  background: linear-gradient(6deg, black, #910c8b);
 
 }
 
