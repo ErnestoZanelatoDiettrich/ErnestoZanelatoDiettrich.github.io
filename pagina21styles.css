@@ -98,6 +98,7 @@ h6 {
   justify-content: center;
   align-items: center;
   width: 500px;
+  background: linear-gradient(0deg, black, purple);
 		
 }
 
@@ -113,7 +114,8 @@ h4, h3, p {
   border-radius: 10px;
   padding: 10px;
   margin: 0 auto;
-  width: 80%; 
+  width: 80%;
+  background: linear-gradient(6deg, black, purple);
 }
 
 #contador-container {
