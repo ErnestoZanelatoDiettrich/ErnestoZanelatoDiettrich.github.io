@@ -43,8 +43,8 @@ h1 {
 }
 
 html {
-  background-image: url('https://tr.rbxcdn.com/180DAY-cee6edfb36f7c1d81e9ab0729d084de5/512/512/Image/Webp/noFilter');
-  background-size: contain;
+      background: linear-gradient(to left, #ffdd00, Black);
+
 }
 
 h2 {
