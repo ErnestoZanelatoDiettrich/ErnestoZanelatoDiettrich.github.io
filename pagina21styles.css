@@ -133,7 +133,7 @@ h4, h3, p {
   width: 450px;
   height: 50px;
   text-align: left;	
-  background-color: linear-gradient(0deg, purple, black);
+  background: linear-gradient(0deg, purple, black);
 
   	
 }
