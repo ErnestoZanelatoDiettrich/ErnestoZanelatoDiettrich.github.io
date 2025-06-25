@@ -124,7 +124,6 @@ h4, h3, p {
   position: fixed;  
   top: 10px;       
   left: 200px auto;      
-  background-color: gray;  
   font-family: Copperplate, monospace;
   color: white;    
   border: 2px solid White;
@@ -134,6 +133,8 @@ h4, h3, p {
   width: 450px;
   height: 50px;
   text-align: left;	
+  background-color: linear-gradient(to right, purple, black);
+
   	
 }
 
@@ -147,12 +148,13 @@ button {
   border: 2px solid white;	
   border-radius: 8px;
 	
+	
 }
  #clearbotton-container {
   position: fixed;  
   top: 80px;       
-  right: 200px auto;      
-  background-color: gray;  
+  right: 200px auto; 
+  background-color: linear-gradient(to right, purple, black);
   color: white;    
   padding: 10px 20px; 
   font-family: Copperplate, monospace;
@@ -160,5 +162,6 @@ button {
   border-radius: 5px; 
   font-size: 20px;    
   z-index: 1000;  
+	 
 	 
  }
