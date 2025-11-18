@@ -1,33 +1,176 @@
-<html>
-	<head>
-		<meta chartset="UTF-8">
-		<link rel="stylesheet" href="pagina2styles.css">
-	
-	
-	</head>
-	<body>
-		<h1>	
-				<text>Breakout statistics</text>
-				<img src="Darksword.webp" alt= "Darksword" width="150"height="150">
-				<text><hr></text>
-		</h1>
-		<h2>
-			<text>Values</text>
-		</h2>
-		
-		<h3><a href="pagina21.html">Ancients</a></h3>
-		<h3><a href="pagina22.html">Godlies</a></h3>
-		<h3><a href="pagina23.html">Uniques</a></h3>
-		<h3><a href="pagina24.html">Vintages</a></h3>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakout Statistics</title>
 
-		
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	</body>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1a1a1a, #731010);
+            color: white;
+            display: flex;
+            min-height: 100vh;
+            transition: margin-left 0.3s;
+        }
 
+        /* --- Botão do menu --- */
+        #menuToggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #ff3b3b;
+            border: none;
+            color: white;
+            padding: 12px 15px;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 6px;
+            z-index: 999;
+            transition: 0.2s;
+        }
 
+        #menuToggle:hover {
+            background: #ff5c5c;
+        }
 
+        /* --- Barra lateral --- */
+        .sidebar {
+            width: 260px;
+            background: #111;
+            padding: 30px 20px;
+            border-right: 3px solid #aa0000;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            height: 100vh;
+            overflow: hidden;
+            transition: width 0.3s;
+        }
 
+        .sidebar h2 {
+            font-size: 28px;
+            text-align: center;
+            color: #ff3b3b;
+        }
 
+        .sidebar a {
+            display: block;
+            padding: 12px 15px;
+            background: #222;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid #333;
+            text-align: center;
+            transition: 0.2s;
+        }
 
+        .sidebar a:hover {
+            background: #ff3b3b;
+            border-color: #ff5c5c;
+        }
+
+        /* --- Conteúdo principal --- */
+        .content {
+            flex: 1;
+            padding: 60px;
+            text-align: center;
+            margin-left: 260px;
+            transition: margin-left 0.3s;
+        }
+
+        .title-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 65px;
+            font-family: 'Monaco', monospace;
+            letter-spacing: 2px;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ff3b3b;
+        }
+
+        p {
+            font-size: 22px;
+            margin-top: 40px;
+            line-height: 1.6;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .update {
+            margin-top: 40px;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        /* Sidebar escondida */
+        .sidebar.hidden {
+            width: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .content.sidebar-hidden {
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Botão para esconder/mostrar -->
+    <button id="menuToggle">≡</button>
+
+    <!-- Barra lateral -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <a href="pagina21.html">Godlies</a>
+        <a href="pagina22.html">Ancients</a>
+        <a href="pagina23.html">Uniques</a>
+        <a href="pagina24.html">Vintages</a>
+        <a href="index.html">Back</a>
+    </div>
+
+    <div class="content" id="content">
+        <div class="title-box">
+            <h1>Breakout Statistics</h1>
+            <img src="Darksword.webp" alt="Darksword">
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+        const content = document.getElementById("content");
+
+        toggleBtn.onclick = () => {
+            sidebar.classList.toggle("hidden");
+            content.classList.toggle("sidebar-hidden");
+        };
+    </script>
+
+</body>
 </html>
+
 
