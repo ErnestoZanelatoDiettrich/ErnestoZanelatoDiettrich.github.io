@@ -3,149 +3,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      /* Cor de fundo suave */
-      html {
-        background: linear-gradient(135deg, #2e3b4e, #502480);
-        color: white;
-        font-family: 'Arial', sans-serif;
+      /* Reset de margem e padding */
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      /* Títulos */
-      h1, h2, h3, h4 {
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
-      /* Estilos gerais de título */
-      h1 {
-        font-size: 3em;
-        margin-top: 30px;
-        color: #ffda44;
-      }
-      
-      h2 {
-        font-size: 2.5em;
-        color: #d74b9e;
-      }
-      
-      h3 {
-        font-size: 2em;
-        color: #8e00ff;
-      }
-
-      /* Contador fixo */
-      #contador-container {
-        position: fixed;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(0, 0, 0, 0.7);
-        border: 2px solid #ffda44;
-        padding: 15px;
-        font-size: 1.5em;
-        z-index: 1000;
-        border-radius: 10px;
-      }
-
-      /* Container para as seções de itens */
-      .container {
+      /* Estilo do corpo */
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #1a1a1a, #731010);
+        color: white;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 20px 0;
+        min-height: 100vh;
+        transition: margin-left 0.3s;
+      }
+
+      /* --- Botão do menu --- */
+      #menuToggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #ff3b3b;
+        border: none;
+        color: white;
+        padding: 12px 15px;
+        font-size: 22px;
+        cursor: pointer;
+        border-radius: 6px;
+        z-index: 999;
+        transition: 0.2s;
+      }
+
+      #menuToggle:hover {
+        background: #ff5c5c;
+      }
+
+      /* --- Barra lateral --- */
+      .sidebar {
+        width: 260px;
+        background: #111;
+        padding: 30px 20px;
+        border-right: 3px solid #aa0000;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        height: 100vh;
+        overflow: hidden;
+        transition: width 0.3s;
+      }
+
+      .sidebar h2 {
+        font-size: 28px;
+        text-align: center;
+        color: #ff3b3b;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 12px 15px;
+        background: #222;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid #333;
+        text-align: center;
+        transition: 0.2s;
+      }
+
+      .sidebar a:hover {
+        background: #ff3b3b;
+        border-color: #ff5c5c;
+      }
+
+      /* --- Conteúdo principal --- */
+      .content {
+        flex: 1;
+        padding: 60px;
+        text-align: center;
+        margin-left: 260px;
+        transition: margin-left 0.3s;
+      }
+
+      .title-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
       }
 
-      /* Estilo dos itens */
-      .item {
-        background: linear-gradient(135deg, #2e3b4e, #502480);
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        width: 280px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      h1 {
+        font-size: 65px;
+        font-family: 'Monaco', monospace;
+        letter-spacing: 2px;
       }
 
-      .item img {
-        border-radius: 10px;
-        margin-top: 10px;
-        transition: transform 0.3s ease;
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #ff3b3b;
       }
 
-      .item img:hover {
-        transform: scale(1.1);
+      p {
+        font-size: 22px;
+        margin-top: 40px;
+        line-height: 1.6;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      /* Estilo dos botões */
-      button {
-        background: linear-gradient(135deg, #6023ba, #000000);
+      .update {
+        margin-top: 40px;
+        font-size: 18px;
+        opacity: 0.8;
+      }
+
+      /* Sidebar escondida */
+      .sidebar.hidden {
+        width: 0;
+        padding: 0;
         border: none;
+      }
+
+      .content.sidebar-hidden {
+        margin-left: 0;
+      }
+
+      /* Estilo para o título */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Monaco', monospace;
         color: white;
-        font-size: 16px;
+      }
+
+      /* Estilo para os botões */
+      button {
+        background: linear-gradient(0deg, #6023ba, black);
+        color: white;
+        border: 2px solid white;
         padding: 10px 20px;
+        font-size: 18px;
+        font-family: 'Copperplate', monospace;
         border-radius: 8px;
         cursor: pointer;
-        transition: background 0.3s ease;
-        margin-top: 10px;
       }
 
       button:hover {
-        background: linear-gradient(135deg, #4b1a97, #000000);
+        background: linear-gradient(0deg, #4b1b7b, black);
       }
 
-      button:active {
-        background: linear-gradient(135deg, #3a0f73, #000000);
+      /* Estilo das caixas de itens */
+      .item {
+        background: linear-gradient(0deg, #222, #444);
+        border-radius: 10px;
+        border: 2px solid #555;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
       }
 
-      /* Ajustes responsivos */
-      @media screen and (max-width: 768px) {
-        .container {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .item {
-          width: 90%;
-        }
-
-        #contador-container {
-          top: 20px;
-        }
+      .item h4 {
+        font-size: 24px;
+        font-weight: bold;
       }
+
+      .item p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 15px;
+      }
+
+      img {
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+        border: 2px solid #fff;
+      }
+
+      /* Contador fixo no topo */
+      #contador-container {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        background: linear-gradient(0deg, #502480, #000);
+        color: white;
+        padding: 12px;
+        font-size: 24px;
+        border-radius: 8px;
+        z-index: 999;
+      }
+
+      #clearbotton-container {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: linear-gradient(0deg, purple, black);
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      #clearbotton-container:hover {
+        background: linear-gradient(0deg, #4b1b7b, black);
+      }
+
     </style>
   </head>
   <body>
-    <h1>Breakout Statistics</h1>
-    <div id="contador-container">Value counter: <span id="contador">0</span></div>
+    <!-- Barra lateral -->
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <a href="pagina2.html">Values</a>
+      <a href="pagina3.html">Untradables</a>
+      <a href="pagina4.html">Ancients</a>
+    </div>
 
-    <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <div class="title-box">
+        <h1>Breakout Statistics</h1>
+        <img src="Darksword.webp" alt="Darksword">
+      </div>
+
+      <p>Welcome to the item statistics page! Here you can see the values, rarity, and demand of various items in the game. Use the buttons to add or remove values as needed.</p>
+
+      <!-- Item Example -->
       <div class="item">
         <h4>Nik's Scythe</h4>
         <p>
-          <span>Value: 100,000,000</span><br>
-          <span>Demand: 10</span><br>
-          <span>Rarity: 10</span><br>
-          <span>Origin: Gift from Nikilis</span><br>
-          <button onclick="adicionarValor(100000000)">+1</button>
-          <button onclick="removerValor(100000000)">-1</button><br>
-          <img src="NiksScytheUpdated.webp" alt="Nik's Scythe" width="150" height="150">
+          <span>* Value: 100000000</span><br>
+          <span>* Demand: 10</span><br>
+          <span>* Stability: Extremely precious</span><br>
+          <span>* Rarity: 10</span><br>
+          <span>* Origin: Gift from Nikilis</span><br>
+          <button onclick="adicionarValor(100000000)">1+</button>
+          <button onclick="removerValor(100000000)">1-</button>
         </p>
+        <img src="NiksScytheUpdated.webp" alt="Nik's Scythe">
       </div>
-      
-      <div class="item">
-        <h4>Gingerscope</h4>
-        <p>
-          <span>Value: 7000</span><br>
-          <span>Demand: 6</span><br>
-          <span>Rarity: 4</span><br>
-          <span>Origin: Christmas 2023 season</span><br>
-          <button onclick="adicionarValor(7000)">+1</button>
-          <button onclick="removerValor(7000)">-1</button><br>
-          <img src="Gingerscope.webp" alt="Gingerscope" width="150" height="150">
-        </p>
-      </div>
+
+      <!-- Outros itens podem ser adicionados aqui -->
+    </div>
+
+    <div id="contador-container">Value Counter: <span id="contador">0</span></div>
+
+    <div id="clearbotton-container">
+      <button onclick="limparContador()">Clear</button>
     </div>
 
     <script>
@@ -160,6 +270,11 @@
         atualizarValor();
       }
 
+      function limparContador() {
+        contador = 0;
+        atualizarValor();
+      }
+
       function removerValor(valor) {
         contador = Math.max(0, contador - valor);
         atualizarValor();
@@ -167,6 +282,7 @@
     </script>
   </body>
 </html>
+
 
 
 
