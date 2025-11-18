@@ -18,6 +18,8 @@
         display: flex;
         min-height: 100vh;
         transition: margin-left 0.3s;
+        flex-direction: column;
+        align-items: center;
       }
 
       /* --- Botão do menu --- */
@@ -86,6 +88,10 @@
         text-align: center;
         margin-left: 260px;
         transition: margin-left 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
       }
 
       .title-box {
@@ -162,8 +168,9 @@
         border-radius: 10px;
         border: 2px solid #555;
         padding: 20px;
-        margin: 10px;
         text-align: center;
+        width: 250px;
+        margin: 10px;
       }
 
       .item h4 {
@@ -185,7 +192,7 @@
         border: 2px solid #fff;
       }
 
-      /* Contador fixo no topo */
+      /* Contadores e botões fixos */
       #contador-container {
         position: fixed;
         top: 10px;
@@ -214,6 +221,26 @@
         background: linear-gradient(0deg, #4b1b7b, black);
       }
 
+      /* Alinhamento de itens em tiers */
+      .tier {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      /* Tiers por valor */
+      .tier-1 {
+        gap: 40px;
+      }
+
+      .tier-2 {
+        gap: 30px;
+      }
+
+      .tier-3 {
+        gap: 20px;
+      }
     </style>
   </head>
   <body>
@@ -234,24 +261,38 @@
 
       <p>Welcome to the item statistics page! Here you can see the values, rarity, and demand of various items in the game. Use the buttons to add or remove values as needed.</p>
 
-      <!-- Item Example -->
-      <div class="item">
-        <h4>Nik's Scythe</h4>
-        <p>
-          <span>* Value: 100000000</span><br>
-          <span>* Demand: 10</span><br>
-          <span>* Stability: Extremely precious</span><br>
-          <span>* Rarity: 10</span><br>
-          <span>* Origin: Gift from Nikilis</span><br>
-          <button onclick="adicionarValor(100000000)">1+</button>
-          <button onclick="removerValor(100000000)">1-</button>
-        </p>
-        <img src="NiksScytheUpdated.webp" alt="Nik's Scythe">
+      <!-- Tiers -->
+      <div class="tier tier-1">
+        <!-- TIER 1 - High Value Items -->
+        <div class="item">
+          <h4>Golden Crown</h4>
+          <p>
+            <span>* Value: 150000000</span><br>
+            <span>* Demand: 6</span><br>
+            <span>* Stability: Very Rare</span><br>
+            <span>* Rarity: 10</span><br>
+            <span>* Origin: Royal Family</span><br>
+            <button onclick="adicionarValor(150000000)">1+</button>
+            <button onclick="removerValor(150000000)">1-</button>
+          </p>
+          <img src="GoldenCrown.webp" alt="Golden Crown">
+        </div>
+        <div class="item">
+          <h4>Nik's Scythe</h4>
+          <p>
+            <span>* Value: 100000000</span><br>
+            <span>* Demand: 10</span><br>
+            <span>* Stability: Extremely precious</span><br>
+            <span>* Rarity: 10</span><br>
+            <span>* Origin: Gift from Nikilis</span><br>
+            <button onclick="adicionarValor(100000000)">1+</button>
+            <button onclick="removerValor(100000000)">1-</button>
+          </p>
+          <img src="NiksScytheUpdated.webp" alt="Nik's Scythe">
+        </div>
       </div>
 
-      <!-- Outros itens podem ser adicionados aqui -->
-    </div>
-
+      <div class="tier tier-2">
     <div id="contador-container">Value Counter: <span id="contador">0</span></div>
 
     <div id="clearbotton-container">
@@ -282,6 +323,7 @@
     </script>
   </body>
 </html>
+
 
 
 
