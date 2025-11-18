@@ -4,109 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breakout Statistics</title>
+
     <style>
-        /* Reset de margens e padding para todo o site */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Fundo do site com um gradiente */
-        html, body {
-            height: 100%;
+        body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to left, #c91616, #1e1e1e);
+            background: linear-gradient(to right, #1a1a1a, #731010);
             color: white;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Barra lateral --- */
+        .sidebar {
+            width: 260px;
+            background: #111;
+            padding: 30px 20px;
+            border-right: 3px solid #aa0000;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ff3b3b;
             text-align: center;
         }
 
-        /* Título principal */
-        h1 {
-            font-family: 'Monaco', monospace;
-            font-size: 50px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        h1 text {
+        .sidebar a {
             display: block;
-            font-size: 30px;
-            color: #f0f0f0;
-            font-weight: normal;
-        }
-
-        /* Imagem ao lado do título */
-        img {
-            border-radius: 50%;
-            margin-left: 15px;
-        }
-
-        /* Títulos secundários com link */
-        h2 {
-            font-size: 35px;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(6deg, #333, #555);
-            padding: 15px;
+            padding: 12px 15px;
+            background: #222;
             border-radius: 8px;
-            margin-top: 20px;
-            width: 250px;
-            margin: 10px auto;
-        }
-
-        /* Link do título */
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #ffd700;
-            text-decoration: underline;
-        }
-
-        /* Texto do parágrafo */
-        p {
             font-size: 20px;
-            line-height: 1.5;
-            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.2s;
+            border: 1px solid #333;
         }
 
-        /* Detalhes de atualização e data */
-        sup {
-            font-size: 0.8em;
-            color: #ff8c00;
+        .sidebar a:hover {
+            background: #ff3b3b;
+            border-color: #ff5c5c;
+        }
+
+        /* --- Conteúdo principal --- */
+        .content {
+            flex: 1;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .title-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 65px;
+            font-family: 'Monaco', monospace;
+            letter-spacing: 2px;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ff3b3b;
+        }
+
+        p {
+            font-size: 22px;
+            margin-top: 40px;
+            line-height: 1.6;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .update {
+            margin-top: 40px;
+            font-size: 18px;
+            opacity: 0.8;
         }
     </style>
 </head>
+
 <body>
 
-    <div>
-        <!-- Título principal com imagem -->
-        <h1>
-            <span>Breakout Statistics</span>
-            <img src="Darksword.webp" alt="Darksword" width="100" height="100">
-        </h1>
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="pagina2.html">Values</a>
+        <a href="pagina3.html">Untradables</a>
+        <a href="#">Weapons</a>
+        <a href="#">MM2 News</a>
+        <a href="#">Report Glitch</a>
+    </div>
 
-        <!-- Links para outras páginas -->
-        <h2><a href="pagina2.html">Values</a></h2>
-        <h2><a href="pagina3.html">Untradables</a></h2>
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <div class="title-box">
+            <h1>Breakout Statistics</h1>
+            <img src="Darksword.webp" alt="Darksword">
+        </div>
 
-        <!-- Texto de boas-vindas e informações -->
         <p>
             Bem-vindo ao Breakout Statistics!<br>
-            Somos o melhor guia para o MM2!<br><br>
-            Sempre trabalhando para corrigir glitches e ajudar a resolver problemas.<br>
-            Nosso servidor do Discord está fora do ar no momento, mas estamos trabalhando nisso!<br><br>
-            Você pode nos ajudar reportando glitches. Agradecemos pela colaboração!<br><br>
-            <strong>Nota de atualização:</strong> Redesigned!<br><br>
-            <strong>Última atualização:</strong> 25 de junho<sup>th</sup>, 2025 | 03:19 PM
+            Seu melhor guia para tudo relacionado ao MM2.<br><br>
+
+            Estamos sempre corrigindo bugs, melhorando o site e ajudando jogadores com problemas.  
+            Nosso servidor do Discord estará disponível em breve!<br><br>
+
+            Você também pode colaborar reportando glitches. Obrigado por fazer parte da comunidade!
         </p>
+
+        <div class="update">
+            <strong>Nota de atualização:</strong> Visual totalmente redesenhado!<br>
+            <strong>Última atualização:</strong> 25 de Junho, 2025 – 03:19 PM
+        </div>
     </div>
 
 </body>
