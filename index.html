@@ -18,6 +18,27 @@
             color: white;
             display: flex;
             min-height: 100vh;
+            transition: margin-left 0.3s;
+        }
+
+        /* --- Botão do menu --- */
+        #menuToggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #ff3b3b;
+            border: none;
+            color: white;
+            padding: 12px 15px;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 6px;
+            z-index: 999;
+            transition: 0.2s;
+        }
+
+        #menuToggle:hover {
+            background: #ff5c5c;
         }
 
         /* --- Barra lateral --- */
@@ -29,14 +50,15 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
+            height: 100vh;
+            overflow: hidden;
+            transition: width 0.3s;
         }
 
         .sidebar h2 {
             font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #ff3b3b;
             text-align: center;
+            color: #ff3b3b;
         }
 
         .sidebar a {
@@ -44,13 +66,13 @@
             padding: 12px 15px;
             background: #222;
             border-radius: 8px;
-            font-size: 20px;
             text-decoration: none;
             color: white;
-            text-align: center;
+            font-size: 20px;
             font-weight: bold;
-            transition: 0.2s;
             border: 1px solid #333;
+            text-align: center;
+            transition: 0.2s;
         }
 
         .sidebar a:hover {
@@ -63,6 +85,8 @@
             flex: 1;
             padding: 60px;
             text-align: center;
+            margin-left: 260px;
+            transition: margin-left 0.3s;
         }
 
         .title-box {
@@ -99,13 +123,27 @@
             font-size: 18px;
             opacity: 0.8;
         }
+
+        /* Sidebar escondida */
+        .sidebar.hidden {
+            width: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .content.sidebar-hidden {
+            margin-left: 0;
+        }
     </style>
 </head>
 
 <body>
 
+    <!-- Botão para esconder/mostrar -->
+    <button id="menuToggle">≡</button>
+
     <!-- Barra lateral -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <h2>Menu</h2>
         <a href="pagina2.html">Values</a>
         <a href="pagina3.html">Untradables</a>
@@ -114,8 +152,8 @@
         <a href="#">Report Glitch</a>
     </div>
 
-    <!-- Conteúdo principal -->
-    <div class="content">
+    <!-- Conteúdo -->
+    <div class="content" id="content">
         <div class="title-box">
             <h1>Breakout Statistics</h1>
             <img src="Darksword.webp" alt="Darksword">
@@ -137,8 +175,20 @@
         </div>
     </div>
 
+    <script>
+        const toggleBtn = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+        const content = document.getElementById("content");
+
+        toggleBtn.onclick = () => {
+            sidebar.classList.toggle("hidden");
+            content.classList.toggle("sidebar-hidden");
+        };
+    </script>
+
 </body>
 </html>
+
 
 
 
